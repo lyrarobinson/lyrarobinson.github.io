@@ -101,9 +101,40 @@
             player.y = platforms[i].y;    
         }
     // Adding the event listeners
-    document.addEventListener("keydown",keydown);
-    document.addEventListener("keyup",keyup);
-    setInterval(loop,22);
+    document.addEventListener("keydown", function(event) {
+    // 37 is the code for the left arrow key
+    if (event.keyCode == 37) {
+        keys.left = true;
+    }
+    // 38 is the code for the up arrow key
+    if (event.keyCode == 38) {
+        if (player.jump == false) {
+        player.y_v = -10;
+        }
+        player.jump = true;
+    }
+    // 39 is the code for the right arrow key
+    if (event.keyCode == 39) {
+        keys.right = true;
+    }
+    });
+    document.addEventListener("keyup", function(event) {
+    // 37 is the code for the left arrow key
+    if (event.keyCode == 37) {
+        keys.left = false;
+    }
+    // 38 is the code for the up arrow key
+    if (event.keyCode == 38) {
+        if (player.y_v < -2) {
+        player.y_v = -3;
+        }
+    }
+    // 39 is the code for the right arrow key
+    if (event.keyCode == 39) {
+        keys.right = false;
+    }
+    });
+
 </script>
 <body>
 <h1 class="pixelated">Lyra Robinson Portfolio</h1>
