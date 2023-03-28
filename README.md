@@ -1,2 +1,0 @@
-# lyraportfolio.github.io
-:)
