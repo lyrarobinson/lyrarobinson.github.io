@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boid Movement</title>
+    <style>
+        /* Define styles for the boids */
+        .boid {
+            width: 20px;
+            height: 20px;
+            background-color: blue;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <div class="boid" id="boid"></div>
+
+    <script>
+        // Get a reference to the boid element
+        var boid = document.getElementById("boid");
+
+        // Set initial position of the boid
+        var x = 100;
+        var y = 100;
+        boid.style.left = x + "px";
+        boid.style.top = y + "px";
+
+        // Function to update the boid's position
+        function updateBoidPosition() {
+            // Update position based on some logic
+            x += Math.random() * 4 - 2; // Random horizontal movement
+            y += Math.random() * 4 - 2; // Random vertical movement
+
+            // Apply new position to the boid element
+            boid.style.left = x + "px";
+            boid.style.top = y + "px";
+
+            // Request animation frame for smooth movement
+            requestAnimationFrame(updateBoidPosition);
+        }
+
+        // Call the updateBoidPosition function to start the animation
+        updateBoidPosition();
+    </script>
+</body>
+</html>
