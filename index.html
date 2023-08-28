@@ -7,11 +7,15 @@
         font-family: "Courier New", Courier, monospace;
         white-space: pre-line; /* Preserve line breaks */
     }
+      /* Define styles for the boids */
+      .boid {
+          width: 20px;
+          height: 20px;
+          background-color: blue;
+          position: absolute;
+        }
 </style>
 
-
-
-</script>
 <body>
 <h1 class="pixelated">Lyra Robinson Portfolio</h1>
 <p class="pixelated">BA Fine Art Computational Arts with Creative Computing @Camberwell
@@ -40,5 +44,35 @@ one time i was on a boat and I took a shitload of ket and it made me feel really
 <u><strong>2012</strong></u>
 oh god oh fuck i'm gonna piss
 mise unseen
+
+    <script>
+        function createBoid(x, y) {
+            var boid = document.createElement("div");
+            boid.className = "boid";
+            boid.style.left = x + "px";
+            boid.style.top = y + "px";
+            document.body.appendChild(boid);
+
+            // Function to update the boid's position
+            function updateBoidPosition() {
+                x += Math.random() * 4 - 2;
+                y += Math.random() * 4 - 2;
+                boid.style.left = x + "px";
+                boid.style.top = y + "px";
+                requestAnimationFrame(updateBoidPosition);
+            }
+
+            // Start animation for the new boid
+            updateBoidPosition();
+        }
+
+        document.addEventListener("click", function(event) {
+            if (event.button === 0) {
+                var x = event.clientX;
+                var y = event.clientY;
+                createBoid(x, y);
+            }
+        });
+    </script>
 </body>
 </html>
