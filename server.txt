@@ -1,0 +1,14 @@
+Python SimpleHTTPServer (Quick and Less Secure):
+
+Alternatively, if you want a quick solution, you can use Python's SimpleHTTPServer with HTTPS. Note that this method uses a self-signed certificate and is less secure than the Node.js and Express approach.
+
+Navigate to your project directory in the terminal.
+
+Run the following command to start a simple HTTP server with HTTPS support:
+
+bash
+Copy code
+python -m http.server 8000 --bind localhost --directory C:\Users\Alex\Documents\GitHub\lyrarobinson.github.io
+Replace 'path/to/your/project' with the actual path to your project directory.
+
+Access your webpage at https://localhost:8000.
