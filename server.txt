@@ -1,18 +1,33 @@
-Python SimpleHTTPServer (Quick and Less Secure):
+nstall "mkcert":
 
-Alternatively, if you want a quick solution, you can use Python's SimpleHTTPServer with HTTPS. Note that this method uses a self-signed certificate and is less secure than the Node.js and Express approach.
+Install "mkcert" on your system. You can find installation instructions for your specific platform on the "mkcert" GitHub repository: https://github.com/FiloSottile/mkcert
+Generate Self-Signed Certificates:
 
-Navigate to your project directory in the terminal.
+Use "mkcert" to generate self-signed SSL/TLS certificates for your local domain. For example:
 
-Run the following command to start a simple HTTP server with HTTPS support:
-
-bash
+shell
 Copy code
-python -m http.server 8000 --bind localhost --directory C:\Users\Alex\Documents\GitHub\lyrarobinson.github.io
-Replace 'path/to/your/project' with the actual path to your project directory.
+mkcert -install
+mkcert localhost
+This will create two files: localhost.pem (certificate) and localhost-key.pem (private key).
 
-Access your webpage at https://localhost:8000.
+Set Up a Local HTTPS Server:
+
+You can use a local server that supports HTTPS to serve your content. Here's an example using Node.js and the "http-server" package:
+
+Install the "http-server" package globally if you haven't already:
+
+shell
+Copy code
+npm install -g http-server
+Start the HTTPS server with the generated certificates:
 
 
-navigate to project
-python -m http.server
+
+cmd as admin
+
+navigate to github directory 
+
+http-server -S -C localhost.pem -K localhost-key.pem
+
+https://localhost:8080/eyetracking.html
