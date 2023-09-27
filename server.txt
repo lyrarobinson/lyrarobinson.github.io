@@ -12,3 +12,7 @@ python -m http.server 8000 --bind localhost --directory C:\Users\Alex\Documents\
 Replace 'path/to/your/project' with the actual path to your project directory.
 
 Access your webpage at https://localhost:8000.
+
+
+navigate to project
+python -m http.server
