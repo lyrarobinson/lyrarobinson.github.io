@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebGazer Calibration</title>
+    <!-- Include WebGazer script -->
+    <script src="C:\Users\Alex\WebGazer\www\webgazer.js" type="text/javascript"></script>
+</head>
+<body>
+    <h1>WebGazer Self-Calibration</h1>
+    <p>Follow the instructions to calibrate your gaze.</p>
+
+    <!-- Add a start calibration button -->
+    <button id="start-calibration">Start Calibration</button>
+
+    <script>
+        // Function to start calibration
+        function startCalibration() {
+            // Initialize WebGazer
+            webgazer.setGazeListener(function(data, elapsedTime) {
+                if (data == null) {
+                    return;
+                }
+                // Access gaze data here (e.g., data.x and data.y)
+                console.log("Gaze Data:", data.x, data.y);
+            }).begin();
+
+            // Start calibration
+            webgazer.showPredictionPoints(true); // Show gaze prediction points
+            webgazer.showVideoPreview(true); // Show webcam video preview
+            webgazer.setTracker("clmtrackr"); // Use CLMtrackr tracker (default)
+
+            // Start calibration after a delay (adjust the delay as needed)
+            setTimeout(function () {
+                webgazer
+                    .start()
+                    .then(function() {
+                        console.log("Calibration started.");
+                        // You can add instructions or UI elements for the calibration process here.
+                    })
+                    .catch(function(err) {
+                        console.error("Calibration error:", err);
+                    });
+            }, 2000); // Delay in milliseconds (2 seconds in this example)
+        }
+
+        // Attach click event listener to the start calibration button
+        document.getElementById("start-calibration").addEventListener("click", startCalibration);
+    </script>
+</body>
+</html>
+
