@@ -1,27 +1,134 @@
 <!DOCTYPE html>
-<html>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    body {
-        font-family: "Courier New", Courier, monospace;
-        white-space: pre-line; /* Preserve line breaks */
-    }
-
-    a {
-        margin-bottom: 10px; /* Adjust the value as needed */
-        display: block; /* This ensures the margin is applied vertically */
-    }
-      /* Define styles for the boids */
-      .boid {
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lyra Robinson - Artist</title>
+<style>
+  body { font-family: 'Helvetica', sans-serif; }
+  #container { display: flex; height: 100vh;}
+  #leftColumn { flex: 1; padding: 10px; overflow-y: auto; height: 100vh;}
+  #rightColumn { flex: 2; padding: 10px; max-height: 100vh; display: flex; justify-content: center; align-items: center; overflow: hidden;}
+  #artistInfo { margin-bottom: 20px; }
+  #works { overflow-y: auto; }
+  #featuredWork { text-align: center; }
+  .workImage { max-width: 100%; max-height: 80vh; object-fit: contain; border: 1px solid #ccc; margin-bottom: 10px; }
+  .boid {
           width: 10px;
           height: 10px;
           background-color: blue;
           position: absolute;
         }
 </style>
-
+</head>
 <body>
+
+<div id="container">
+  <div id="leftColumn">
+    <div id="artistInfo">
+      <h1>Lyra Robinson</h1>
+      <p>new media artist & creative technologist</p>
+      <p>Currently studying fine art at camberwell</p>
+      <a href="artist_cv.pdf" target="_blank">cv.pdf</a>
+      <p>@lyrafuckingrobinson</p>
+      <p><a href="mailto:lyra@lyrarobinson.art">lyra@lyrarobinson.art</a></p>
+      <p>07432 883711</p>
+    </div>
+    <div id="Works">
+      <h2>work</h2>
+      <h3>2023</h3>
+      <p><a href="#" onclick="loadContent('thepathto.html')">the path to</a></p>
+      <p><a href="#" onclick="loadContent('sexhouse.html')">sexhouse</a></p>
+      <p><a href="#" onclick="loadContent('vaginapiece.html')">vagina piece</a></p>
+      <p><a href="#" onclick="loadContent('facesvid.html')">facesvid1.mp4</a></p>
+      <p><a href="#" onclick="loadContent('soundingexperience.html')">experimental sounding experience</a></p>
+      <p><a href="#" onclick="loadContent('ieatouthegarbage.html')">I eat from the garbage and drink out of the toilet. I piss in my pants when pretty girls look at me</a></p>
+      
+      <u><strong>2022</strong></u>
+      <p><a href="#" onclick="loadContent('isaac.html')">isaac</a></p>
+      <p><a href="#" onclick="loadContent('overlap.html')">overlap</a></p>
+      <p><a href="#" onclick="loadContent('nuenglish.html')">nu english</a></p>
+      <p><a href="#" onclick="loadContent('beachseries.html')">beach 1/ beach 2</a></p>
+      <p><a href="#" onclick="loadContent('sillylittlepeople.html')">silly little people</a></p>
+      <p><a href="#" onclick="loadContent('isuck.html')">i suck you suck we all suck</a></p>
+      <p><a href="#" onclick="loadContent('onetimeiwasonaboat.html')">one time i was on a boat and I took a shitload of ket and it made me feel really weird</a></p>
+      
+      <u><strong>2021</strong></u>
+      <p><a href="#" onclick="loadContent('imgonnapiss.html')">oh god oh fuck i'm gonna piss</a></p>
+      <p><a href="#" onclick="loadContent('miseunseen.html')">mise unseen</a></p>
+      <!-- More works can be added here -->
+    </div>
+  </div>
+  <div id="rightColumn">
+    <div id="featuredWork">
+      <figure class="changeImage">
+        <img src="image1.jpg" alt="Name of Work" class="workImage">
+        <figcaption>Name of Work (Year)</figcaption>
+      </figure>
+      <!-- Add more images here -->
+    </div>
+    <div id="contentDisplay">
+        <!-- Content from external HTML files will be loaded here -->
+    </div>
+  </div>
+</div>
+
+<script>
+    function loadContent(fileName) {
+      // Get a reference to the container where the content will be displayed
+      const contentDisplay = document.getElementById('contentDisplay');
+      
+      // Assuming the image and figcaption are wrapped in a figure element
+      // Adjust the selector if your HTML structure is different
+      const figureElement = document.querySelector('#rightColumn figure');
+    
+      // Clear the content display area or hide the figure
+      contentDisplay.innerHTML = ''; // Clears any existing content
+      if (figureElement) figureElement.style.display = 'none'; // Hides the figure, which includes both img and figcaption
+    
+      // Fetch and display the new content
+      fetch(fileName)
+        .then(response => response.text())
+        .then(html => {
+          contentDisplay.innerHTML = html;
+          contentDisplay.style.display = 'block'; // Ensure the display area is visible if previously hidden
+        })
+        .catch(error => {
+          console.error('Error loading the content:', error);
+          contentDisplay.innerHTML = '<p>Error loading content.</p>';
+        });
+    }
+    </script>
+    
+    
+    
+
+<script>
+    // JavaScript to change the image every 30 seconds
+    const images = [
+      { src: 'image1.jpg', caption: 'Name of Work 1 (Year)' },
+      { src: 'image2.jpg', caption: 'Name of Work 2 (Year)' },
+      { src: 'image3.jpg', caption: 'Name of Work 3 (Year)' }
+      // Add more image objects here
+    ];
+    let currentImage = 0;
+    
+    function changeImage() {
+      const imageElement = document.querySelector('.changeImage img');
+      const captionElement = document.querySelector('.changeImage figcaption');
+      if (imageElement && captionElement) {
+        // Change the image source and caption
+        imageElement.src = images[currentImage].src;
+        captionElement.textContent = images[currentImage].caption;
+        // Increment or reset current image counter
+        currentImage = (currentImage + 1) % images.length;
+      }
+    }
+  
+    // Call changeImage every 30 seconds
+    setInterval(changeImage, 5000);
+  </script>
+  
   <script>
     function createBoid(x, y) {
         var boid = document.createElement("div");
@@ -52,35 +159,5 @@
     });
   </script>
 
-<script type="module" src="/memodel.js"></script>
-
-<h1 class="pixelated">Lyra Robinson Portfolio</h1>
-<p class="pixelated">BA Fine Art Computational Arts with Creative Computing @Camberwell
-  Foundation @MMU
-  Based in South London
-<p>@lyrafuckingrobinson
-  a.robinson0120201@arts.ac.uk
-  07432583711</p>
-
-<u><strong>2023</strong></u>
-<a href="thepathto.html">the path to</a>
-<a href="sexhouse.html">sexhouse</a>
-<a href="vaginapiece.html">vagina piece</a>
-<a href="facesvid.html">facesvid1.mp4</a>
-<a href="soundingexperience.html">experimental sounding experience</a>
-<a href="ieatouthegarbage.html"> I eat from the garbage and drink out of the toilet. I piss in my pants when pretty girls look at me </a>
-
-<u><strong>2022</strong></u>
-<a href="isaac.html">isaac</a>
-<a href="overlap.html">overlap</a>
-<a href="nuenglish">nu english</a>
-<a href="beachseries.html">beach 1/ beach 2</a>
-<a href="sillylittlepeople.html">silly little people</a>
-<a href="isuck.html">i suck you suck we all suck</a>
-<a href="onetimeiwasonaboat.html">one time i was on a boat and I took a shitload of ket and it made me feel really weird</a>
-
-<u><strong>2021</strong></u>
-<a href="imgonnapiss.html">oh god oh fuck i'm gonna piss</a>
-<a href="miseunseen.html">mise unseen</a>
 </body>
 </html>

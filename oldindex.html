@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+        font-family: "Courier New", Courier, monospace;
+        white-space: pre-line; /* Preserve line breaks */
+    }
+
+    a {
+        margin-bottom: 10px; /* Adjust the value as needed */
+        display: block; /* This ensures the margin is applied vertically */
+    }
+      /* Define styles for the boids */
+      .boid {
+          width: 10px;
+          height: 10px;
+          background-color: blue;
+          position: absolute;
+        }
+</style>
+
+<body>
+  <script>
+    function createBoid(x, y) {
+        var boid = document.createElement("div");
+        boid.className = "boid";
+        boid.style.left = x + "px";
+        boid.style.top = y + "px";
+        document.body.appendChild(boid);
+
+        // Function to update the boid's position
+        function updateBoidPosition() {
+            x += Math.random() * 4 - 2;
+            y += Math.random() * 4 - 2;
+            boid.style.left = x + "px";
+            boid.style.top = y + "px";
+            requestAnimationFrame(updateBoidPosition);
+        }
+
+        // Start animation for the new boid
+        updateBoidPosition();
+    }
+
+    document.addEventListener("click", function(event) {
+        if (event.button === 0) {
+            var x = event.clientX;
+            var y = event.clientY;
+            createBoid(x, y);
+        }
+    });
+  </script>
+
+<script type="module" src="/memodel.js"></script>
+
+<h1 class="pixelated">Lyra Robinson Portfolio</h1>
+<p class="pixelated">BA Fine Art Computational Arts with Creative Computing @Camberwell
+  Foundation @MMU
+  Based in South London
+<p>@lyrafuckingrobinson
+  a.robinson0120201@arts.ac.uk
+  07432583711</p>
+
+<u><strong>2023</strong></u>
+<a href="thepathto.html">the path to</a>
+<a href="sexhouse.html">sexhouse</a>
+<a href="vaginapiece.html">vagina piece</a>
+<a href="facesvid.html">facesvid1.mp4</a>
+<a href="soundingexperience.html">experimental sounding experience</a>
+<a href="ieatouthegarbage.html"> I eat from the garbage and drink out of the toilet. I piss in my pants when pretty girls look at me </a>
+
+<u><strong>2022</strong></u>
+<a href="isaac.html">isaac</a>
+<a href="overlap.html">overlap</a>
+<a href="nuenglish">nu english</a>
+<a href="beachseries.html">beach 1/ beach 2</a>
+<a href="sillylittlepeople.html">silly little people</a>
+<a href="isuck.html">i suck you suck we all suck</a>
+<a href="onetimeiwasonaboat.html">one time i was on a boat and I took a shitload of ket and it made me feel really weird</a>
+
+<u><strong>2021</strong></u>
+<a href="imgonnapiss.html">oh god oh fuck i'm gonna piss</a>
+<a href="miseunseen.html">mise unseen</a>
+</body>
+</html>
