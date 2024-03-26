@@ -1,12 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Page Title</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Image Gallery</title>
+<style>
+  body {
+    text-align: center; /* Centers the content of the body */
+  }
+  .landscape {
+    width: 80%; /* Adjusts the size of the landscape image */
+    height: auto; /* Maintains the aspect ratio */
+    margin: 20px 0; /* Adds some space around the image */
+  }
+  .portraits {
+    display: flex;
+    justify-content: center; /* Centers the portrait images */
+    gap: 20px; /* Adds space between the portrait images */
+  }
+  .portrait {
+    width: 25%; /* Adjusts the width of the portrait images */
+    height: auto; /* Maintains the aspect ratio */
+  }
+</style>
 </head>
 <body>
-    <h1>Hello, world!</h1>
-    <p>This is a new HTML file.</p>
+
+<img src="./assets/piss1.jpg" alt="Landscape" class="landscape">
+
+<div class="portraits">
+  <img src="./assets/piss2.jpg" alt="Portrait 1" class="portrait">
+  <img src="./assets/piss3.jpg" alt="Portrait 2" class="portrait">
+  <img src="./assets/piss4.jpg" alt="Portrait 3" class="portrait">
+</div>
+
 </body>
 </html>
