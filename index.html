@@ -46,14 +46,16 @@
       <h1>Lyra Robinson</h1>
       <p>new media artist & creative technologist</p>
       <p>Currently studying fine art at camberwell</p>
-      <a href="artistcv.pdf" target="_blank">cv.pdf</a>
-      <p><a href="#" onclick="loadContent('artist_statement.html')">artist_statement</a></p>
+      <p><a href="#" onclick="loadContent('artist_statement.html')">about</a></p>
       <p>@lyrafuckingrobinson</p>
-      <p><a href="mailto:lyra@lyrarobinson.art">lyra@lyrarobinson.art</a></p>
+	  <p><a href="https://github.com/lyrarobinson" target="_blank">github</a> //
+		 <a href="https://www.youtube.com/@lyrarobinson5221" target="_blank">youtube</a></p>
+      <!--<p><a href="mailto:lyra@lyrarobinson.art">lyra@lyrarobinson.art</a></p> -->
     </div>
     <div id="Works">
       <h2>Selected Work</h2>
       <h3>2024</h3>
+	  <p><a href="#" onclick="loadContent('clipcats.html')">clipcats</a></p>
       <p><a href="#" onclick="loadContent('eyesinmotion.html')">eyes in motion</a></p>
       <p><a href="#" onclick="loadContent('oculus.html')">oculus</a></p>
 
@@ -221,7 +223,7 @@
       requestAnimationFrame(animate);
 
       if (model) {
-        model.rotation.y += 0.02; // Adjust rotation speed if necessary
+        model.rotation.y += 0.01; // Adjust rotation speed if necessary
       }
 
       renderer.render(scene, camera);
