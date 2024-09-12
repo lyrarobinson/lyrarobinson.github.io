@@ -77,6 +77,7 @@
       <h3>2024</h3>
 	  <p><a href="#" onclick="loadContent('reconstructed_text.html')">reconstructed_text</a></p>
 	  <p><a href="#" onclick="loadContent('clipcats.html')">clipcats</a></p>
+	  <p><a href="#" onclick="loadContent('ascii.html')">ASCII</a></p>
       <p><a href="#" onclick="loadContent('eyesinmotion.html')">eyes in motion</a></p>
       <p><a href="#" onclick="loadContent('oculus.html')">oculus</a></p>
 
@@ -152,6 +153,62 @@
   
     // Call changeImage every 30 seconds
     setInterval(changeImage, 5000);
+</script>
+
+<script>
+	let scene, camera, renderer, model;
+  
+	function init3DModel() {
+	  // Create scene
+	  scene = new THREE.Scene();
+	  scene.background = new THREE.Color(0xffffff); // Change background color as needed
+  
+	  // Set up camera
+	  camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+	  camera.position.set(3, 4.5, 10); // Adjust camera position as needed
+  
+	  // Renderer
+	  renderer = new THREE.WebGLRenderer({ antialias: true });
+	  renderer.setSize(document.getElementById('modelContainer').clientWidth, 400); // Match the size of your container
+	  document.getElementById('modelContainer').appendChild(renderer.domElement);
+  
+	  // Load GLB model
+	  const loader = new THREE.GLTFLoader();
+	  loader.load('pussy.glb', function (gltf) {
+		model = gltf.scene;
+		scene.add(model);
+		model.position.y = -1; // Adjust based on your model's initial position
+		model.scale.set(0.3, 0.5, 0.3); // Scale down the model; adjust values as needed
+		model.position.x = -3;
+		model.position.z = 2;
+	  }, undefined, function (error) {
+		console.error(error);
+	  });
+  
+	  // Lighting
+	  const ambientLight = new THREE.AmbientLight(0x404040);
+	  scene.add(ambientLight);
+  
+	  const directionalLight = new THREE.DirectionalLight(0xffffff, 1);
+	  directionalLight.position.set(0, 1, 2);
+	  scene.add(directionalLight);
+  
+	  // Animation loop for rotation
+	  function animate() {
+		requestAnimationFrame(animate);
+  
+		if (model) {
+		  model.rotation.y += 0.01; // Adjust rotation speed if necessary
+		}
+  
+		renderer.render(scene, camera);
+	  }
+  
+	  animate();
+	}
+  
+	// Call the function to initialize the model when the page loads
+	window.onload = init3DModel;
 </script>
 
 </body>
