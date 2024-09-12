@@ -81,44 +81,30 @@
     <!-- Additional content or links -->
   </div>
   <div id="rightColumn">
-    <div id="featuredWork">
-      <figure class="changeImage">
-        <img src="image1.jpg" alt="Name of Work" class="workImage">
-        <figcaption>"faces" exhibited at DebouwPut Gallery in Amsterdam</figcaption>
-      </figure>
-      <!-- Add more images here -->
-    </div>
-    <div id="contentDisplay">
-        <!-- Content from external HTML files will be loaded here -->
-    </div>
-  </div>
+	<div id="featuredWork">
+	  <figure class="changeImage">
+		<img src="image1.jpg" alt="Name of Work" class="workImage">
+		<figcaption>"faces" exhibited at DebouwPut Gallery in Amsterdam</figcaption>
+	  </figure>
+	</div>
+	<iframe id="contentFrame" style="width: 100%; height: 100%; border: none;"></iframe>
+  </div>  
 </div>
 
 <script>
-    function loadContent(fileName) {
-      // Get a reference to the container where the content will be displayed
-      const contentDisplay = document.getElementById('contentDisplay');
-      
-      // Assuming the image and figcaption are wrapped in a figure element
-      // Adjust the selector if your HTML structure is different
-      const figureElement = document.querySelector('#rightColumn figure');
-    
-      // Clear the content display area or hide the figure
-      contentDisplay.innerHTML = ''; // Clears any existing content
-      if (figureElement) figureElement.style.display = 'none'; // Hides the figure, which includes both img and figcaption
-    
-      // Fetch and display the new content
-      fetch(fileName)
-        .then(response => response.text())
-        .then(html => {
-          contentDisplay.innerHTML = html;
-          contentDisplay.style.display = 'block'; // Ensure the display area is visible if previously hidden
-        })
-        .catch(error => {
-          console.error('Error loading the content:', error);
-          contentDisplay.innerHTML = '<p>Error loading content.</p>';
-        });
-    }
+	function loadContent(fileName) {
+		// Get a reference to the iframe where the content will be displayed
+		const contentFrame = document.getElementById('contentFrame');
+		
+		// Assuming the image and figcaption are wrapped in a figure element
+		const figureElement = document.querySelector('#rightColumn figure');
+	  
+		// Hide the figure (the image and caption)
+		if (figureElement) figureElement.style.display = 'none';
+	  
+		// Set the source of the iframe to the specified file
+		contentFrame.src = fileName;
+	  }	  
     </script>
     
     
