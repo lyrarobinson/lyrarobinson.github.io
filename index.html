@@ -8,17 +8,40 @@
   body { font-family: 'Helvetica', sans-serif; }
   #container { display: flex; height: 100vh;}
   #leftColumn { flex: 1; padding: 10px; overflow-y: auto; height: 100vh; text-align: left;}
-  #rightColumn { flex: 2; padding: 10px; max-height: 100vh; display: flex; justify-content: center; align-items: center; overflow: hidden; text-align: center;}
+  #rightColumn { 
+    flex: 2; 
+    padding: 10px; 
+    max-height: 100vh; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    overflow: hidden; 
+    text-align: center;
+    flex-direction: column; /* This allows stacking of elements vertically */
+  }
   #artistInfo { margin-bottom: 20px; }
   #works { overflow-y: auto; }
-  #featuredWork { text-align: center; }
-  .workImage { max-width: 100%; max-height: 80vh; object-fit: contain; border: 1px solid #ccc; margin-bottom: 10px; }
+  #featuredWork {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+  }
+  .workImage { 
+    max-width: 100%; 
+    max-height: 80vh; 
+    object-fit: contain; 
+    border: 1px solid #ccc; 
+    margin-bottom: 10px; 
+  }
   .boid {
-          width: 10px;
-          height: 10px;
-          background-color: blue;
-          position: absolute;
-        }
+    width: 10px;
+    height: 10px;
+    background-color: blue;
+    position: absolute;
+  }
   #modelContainer {
     position: absolute;
     top: 0;
@@ -27,15 +50,12 @@
     height: 6000px;
     z-index: -1; /* Ensures the model is behind other content */
   }
-
 </style>
 <script src="https://cdn.jsdelivr.net/npm/three@0.125.2/build/three.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/three@0.125.2/examples/js/loaders/GLTFLoader.js"></script>
 
 <link rel="icon" type="image/png" href="icon.png">
 <link rel="apple-touch-icon" sizes="180x180" href="icon.png">
-
-
 
 </head>
 <body>
@@ -105,10 +125,7 @@
 		// Set the source of the iframe to the specified file
 		contentFrame.src = fileName;
 	  }	  
-    </script>
-    
-    
-    
+</script>
 
 <script>
     // JavaScript to change the image every 30 seconds
@@ -134,94 +151,7 @@
   
     // Call changeImage every 30 seconds
     setInterval(changeImage, 5000);
-  </script>
-  
-  <script>
-    function createBoid(x, y) {
-        var boid = document.createElement("div");
-        boid.className = "boid";
-        boid.style.left = x + "px";
-        boid.style.top = y + "px";
-        document.body.appendChild(boid);
-
-        // Function to update the boid's position
-        function updateBoidPosition() {
-            x += Math.random() * 4 - 2;
-            y += Math.random() * 4 - 2;
-            boid.style.left = x + "px";
-            boid.style.top = y + "px";
-            requestAnimationFrame(updateBoidPosition);
-        }
-
-        // Start animation for the new boid
-        updateBoidPosition();
-    }
-
-    document.addEventListener("click", function(event) {
-        if (event.button === 0) {
-            var x = event.clientX;
-            var y = event.clientY;
-            createBoid(x, y);
-        }
-    });
-  </script>
-
-<script>
-  let scene, camera, renderer, model;
-
-  function init3DModel() {
-    // Create scene
-    scene = new THREE.Scene();
-    scene.background = new THREE.Color(0xffffff); // Change background color as needed
-
-    // Set up camera
-    camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-    camera.position.set(3, 4.5, 10); // Adjust camera position as needed
-
-    // Renderer
-    renderer = new THREE.WebGLRenderer({ antialias: true });
-    renderer.setSize(document.getElementById('modelContainer').clientWidth, 400); // Match the size of your container
-    document.getElementById('modelContainer').appendChild(renderer.domElement);
-
-    // Load GLB model
-    const loader = new THREE.GLTFLoader();
-    loader.load('pussy.glb', function (gltf) {
-      model = gltf.scene;
-      scene.add(model);
-      model.position.y = -1; // Adjust based on your model's initial position
-      model.scale.set(0.3, 0.5, 0.3); // Scale down the model; adjust values as needed
-      model.position.x = -3;
-      model.position.z = 2;
-    }, undefined, function (error) {
-      console.error(error);
-    });
-
-    // Lighting
-    const ambientLight = new THREE.AmbientLight(0x404040);
-    scene.add(ambientLight);
-
-    const directionalLight = new THREE.DirectionalLight(0xffffff, 1);
-    directionalLight.position.set(0, 1, 2);
-    scene.add(directionalLight);
-
-    // Animation loop for rotation
-    function animate() {
-      requestAnimationFrame(animate);
-
-      if (model) {
-        model.rotation.y += 0.01; // Adjust rotation speed if necessary
-      }
-
-      renderer.render(scene, camera);
-    }
-
-    animate();
-  }
-
-  // Call the function to initialize the model when the page loads
-  window.onload = init3DModel;
 </script>
-
 
 </body>
 </html>
