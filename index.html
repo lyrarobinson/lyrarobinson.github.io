@@ -5,6 +5,23 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Lyra Robinson - Artist Portfolio</title>
 <style>
+	@media screen and (max-width: 768px) {
+		#container {
+		  flex-direction: column;
+		}
+	  
+		#leftColumn {
+		  width: 100%;
+		  flex: none; /* Remove flex shrinking */
+		  height: auto; /* Let it expand naturally */
+		  padding-bottom: 50px; /* Extra padding for readability */
+		}
+	  
+		#rightColumn {
+		  display: none; /* Completely hide the right column */
+		}
+	  }
+	  
   body { font-family: 'Helvetica', sans-serif; overflow-x: hidden;}
   #container { display: flex; height: 100vh;}
   #leftColumn { flex: 1; padding: 0px 10px 10px 10px; overflow-y: auto; height: 100vh; text-align: left; line-height: 0.8;}
