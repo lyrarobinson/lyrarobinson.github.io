@@ -141,6 +141,7 @@
       <p>new media artist</p>
       <p><a href="#" onclick="loadContent('artist_statement.html')">about</a></p>
       <p>@lyrafuckingrobinson</p>
+	  <p>lyrarobinson02@gmail.com</p>
 	  <p><a href="https://github.com/lyrarobinson" target="_blank">github</a> //
 		 <a href="https://www.youtube.com/@lyrarobinson5221" target="_blank">youtube</a> //
 		 <a href="https://substack.com/@lyra797589" target="_blank">substack</a>
@@ -240,30 +241,49 @@
 </script>
 
 <script>
-    // JavaScript to change the image every 30 seconds
-    const images = [
-      { src: 'image1.jpg', caption: '"faces" exhibited at DebouwPut Gallery in Amsterdam' },
-      { src: 'image2.jpg', caption: 'non-negatives' },
-      { src: 'image3.jpg', caption: 'part of a series of generative landscapes' },
-	  { src: 'image4.jpg', caption: 'original model of the vagina prosthetic' }, 
-      // Add more image objects here
+    // Array of all your artwork pages
+    const artworks = [
+      'rat.html',
+      'photog.html',
+      'reconstructed_text.html',
+      'clipcats.html',
+      'ascii.html',
+      'eyesinmotion.html',
+      'oculus.html',
+      'sexhouse.html',
+      'facesvid.html',
+      'soundingexperience.html',
+      'ieatouthegarbage.html',
+      'beachseries.html',
+      'sillylittlepeople.html',
+      'onetimeiwasonaboat.html',
+      'imgonnapiss.html',
+      'miseunseen.html',
+      'artist_statement.html'
     ];
-    let currentImage = 0;
     
-    function changeImage() {
-      const imageElement = document.querySelector('.changeImage img');
-      const captionElement = document.querySelector('.changeImage figcaption');
-      if (imageElement && captionElement) {
-        // Change the image source and caption
-        imageElement.src = images[currentImage].src;
-        captionElement.textContent = images[currentImage].caption;
-        // Increment or reset current image counter
-        currentImage = (currentImage + 1) % images.length;
-      }
+    // Function to load a random artwork on page load
+    function loadRandomArtwork() {
+      const randomIndex = Math.floor(Math.random() * artworks.length);
+      const randomArtwork = artworks[randomIndex];
+      
+      // Load the random artwork into the desktop iframe
+      const contentFrame = document.getElementById('contentFrame');
+      const figureElement = document.querySelector('#rightColumn figure');
+      
+      // Hide the figure (the cycling images)
+      if (figureElement) figureElement.style.display = 'none';
+      
+      // Load the random artwork
+      contentFrame.src = randomArtwork;
     }
   
-    // Call changeImage every 30 seconds
-    setInterval(changeImage, 5000);
+    // Load random artwork when page loads (only on desktop)
+    window.addEventListener('load', function() {
+      if (window.innerWidth > 768) {
+        loadRandomArtwork();
+      }
+    });
 </script>
 
 <script>
