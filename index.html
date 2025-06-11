@@ -7,19 +7,17 @@
 <style>
 	@media screen and (max-width: 768px) {
 		#container {
-			flex-direction: column;
+			display: block; /* Change from flex to block */
 		}
 	
 		#leftColumn {
 			width: 100%;
-			flex: none;
-			height: auto;
-			padding-bottom: 50px;
+			height: 100vh; /* Full viewport height */
+			padding: 10px;
 		}
 	
-		#rightColumn, 
-		#featuredWork {
-			display: none; /* Hide the right column and the featured work section */
+		#rightColumn {
+			display: none !important; /* Completely hide right column */
 		}
 
 		/* Mobile overlay styles */
