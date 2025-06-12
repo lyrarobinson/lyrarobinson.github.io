@@ -1,26 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="stylesheet" href="../css/scrollbar.css">
-   <title>Work Title - Lyra Robinson</title>
-   <style>
-       body {
-           font-family: 'Helvetica', sans-serif;
-           margin: 0;
-           padding: 20px;
-           background-color: white;
-           line-height: 1.4;
-       }
-       
-       /* Add your styles here */
-       
-   </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/scrollbar.css">
+  <title>Alternative Operations</title>
+  <style>
+      body {
+          font-family: 'Helvetica', sans-serif;
+          margin: 0;
+          padding: 20px;
+          background-color: white;
+          line-height: 1.4;
+          overflow-x: hidden;
+      }
+      
+      .image-container {
+          width: calc(100% - 40px);
+          max-width: 800px;
+          margin: 0 auto 40px auto;
+      }
+      
+      .image-display {
+          width: 100%;
+          height: auto;
+          display: block;
+          margin-bottom: 40px;
+      }
+      
+      .content {
+          max-width: 800px;
+          margin: 0 auto;
+      }
+      
+      h1 {
+          font-size: 32px;
+          font-weight: bold;
+          margin: 0 0 10px 0;
+          line-height: 1.2;
+      }
+      
+      .subtitle {
+          font-size: 18px;
+          margin: 0 0 30px 0;
+          font-weight: normal;
+          color: #666;
+      }
+      
+      p {
+          font-size: 16px;
+          margin: 0 0 20px 0;
+          text-align: left;
+      }
+      
+      /* Mobile styles */
+      @media screen and (max-width: 768px) {
+          body {
+              padding: 15px;
+          }
+          
+          .image-container {
+              width: calc(100% - 30px);
+              max-width: 400px;
+              margin-bottom: 30px;
+          }
+          
+          .image-display {
+              margin-bottom: 30px;
+          }
+          
+          h1 {
+              font-size: 24px;
+          }
+          
+          .subtitle {
+              font-size: 16px;
+          }
+          
+          p {
+              font-size: 14px;
+          }
+      }
+  </style>
 </head>
 <body>
-   
-   <!-- Your content here -->
-   
+  <div class="image-container">
+      <img src="assets/alt_ops1.jpeg" alt="Alternative Operations installation" class="image-display">
+  </div>
+  
+  <div class="content">
+      
+      <p class="subtitle">Moving image installation</p>
+      
+      <p>Shown here installed in Millbank Tower.</p>
+      
+      <p>Moments in Time, the largest and most comprehensive action classification dataset, contains just 339 actions.</p>
+      
+      <p>Visitors have their movements classified in real time, with the corresponding training videos played back to them.</p>
+      
+      <p>Through the process of interacting with the piece, visitors are encouraged to push the model and perform actions that are not easily classifiable, re-thinking what their bodies are capable of doing and reflecting on who holds the right to categorise people's bodies.</p>
+  
+	  <p><a href="https://youtu.be/QESkQcHhW64?si=PdRs_8bWwBYBEaJX" target="_blank">video recording of the piece running</a></p>	
+	</div>
+  
+  <div class="image-container">
+      <img src="assets/alt_ops1.gif" alt="Alternative Operations demonstration" class="image-display">
+  </div>
 </body>
 </html>
