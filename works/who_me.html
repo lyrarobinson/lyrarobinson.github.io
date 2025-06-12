@@ -1,57 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="stylesheet" href="../css/scrollbar.css">
-   <title>Who! Me? - Lyra Robinson</title>
-   <style>
-       body {
-           font-family: 'Helvetica', sans-serif;
-           margin: 0;
-           padding: 20px;
-           background-color: white;
-           line-height: 1.4;
-           overflow-x: hidden;
-       }
-       
-       .content {
-           max-width: 1000px;
-           margin: 0 auto;
-       }
-
-       p {
-           font-size: 16px;
-           margin-bottom: 30px;
-           text-align: left;
-       }
-
-       .landscape {
-           width: 100%;
-           height: auto;
-           display: block;
-       }
-       
-       @media screen and (max-width: 768px) {
-           body {
-               padding: 15px;
-           }
-           
-           p {
-               font-size: 14px;
-               margin-bottom: 20px;
-           }
-       }
-   </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/scrollbar.css">
+  <title>Who Me?</title>
+  <style>
+      body {
+          font-family: 'Helvetica', sans-serif;
+          margin: 0;
+          padding: 20px;
+          background-color: white;
+          line-height: 1.4;
+          overflow-x: hidden;
+      }
+      
+      .image-container {
+          width: calc(100% - 40px);
+          max-width: 800px;
+          margin: 0 auto 40px auto;
+      }
+      
+      .image-display {
+          width: 100%;
+          height: auto;
+          display: block;
+          margin-bottom: 40px;
+      }
+      
+      .content {
+          max-width: 800px;
+          margin: 0 auto;
+      }
+      
+      h1 {
+          font-size: 32px;
+          font-weight: bold;
+          margin: 0 0 10px 0;
+          line-height: 1.2;
+      }
+      
+      .subtitle {
+          font-size: 18px;
+          margin: 0 0 30px 0;
+          font-weight: normal;
+          color: #666;
+      }
+      
+      p {
+          font-size: 16px;
+          margin: 0 0 20px 0;
+          text-align: left;
+      }
+      
+      /* Mobile styles */
+      @media screen and (max-width: 768px) {
+          body {
+              padding: 15px;
+          }
+          
+          .image-container {
+              width: calc(100% - 30px);
+              max-width: 400px;
+              margin-bottom: 30px;
+          }
+          
+          .image-display {
+              margin-bottom: 30px;
+          }
+          
+          h1 {
+              font-size: 24px;
+          }
+          
+          .subtitle {
+              font-size: 16px;
+          }
+          
+          p {
+              font-size: 14px;
+          }
+      }
+  </style>
 </head>
 <body>
-   <div class="content">
-       <p>139 Faces that could be mistaken for me by a machine, sourced from notable facial recognition datasets.
-           <br>Ordered by most to least similar, by python's facial_recognition library.
-           <br>Datasets include MegaFace, VGG-Face, Flicker-Face among others. 
-           <br>All images published under creative commons
-       </p>
-       <img src="./assets/lyratopleft.jpg" alt="Grid of 139 faces from facial recognition datasets" class="landscape">
-   </div>
+  <div class="image-container">
+      <img src="assets/who_me1.jpg" alt="Who Me? installation" class="image-display">
+  </div>
+  
+  <div class="content">
+
+      
+      <p class="subtitle">Digital Collage</p>
+      
+      <p>Shown here installed at the Photographer's Gallery for an event commissioned by the Flickr Foundation.</p>
+      
+      <p>139 Faces that could be mistaken for me by a machine, sourced from notable facial recognition datasets – out of ~20 million tested. Ordered most to least similar, by python's facial_recognition library. Works as an operational representation of embeddings and cosine similarity algorithms, while also questioning contemporary notions of an individual 'likeness'.</p>
+      
+      <p>Major Datasets used:</p>
+      <p>Caltech WebFaces<br>
+      Casia WebFaces,
+      CelebA,
+      Chicago,
+      FERET,
+      Flickr-Face,
+      Human_Face,
+      Labelled Faces in the Wild,
+      UTKFace,
+      VGG-Face,
+      MegaFace,
+  </div>
+  
+  <div class="image-container">
+      <img src="assets/who_me2.jpg" alt="Who Me? demonstration" class="image-display">
+  </div>
+  
+  <div class="image-container">
+      <img src="assets/who_me3.gif" alt="Who Me? animation" class="image-display">
+  </div>
 </body>
 </html>
