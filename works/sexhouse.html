@@ -1,37 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Centered YouTube Video</title>
-    <style>
-        body {
-            margin: 0;
-            height: 100vh;
-            display: flex;
-			flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            background-color: #f4f4f4;
-			font-family: 'Helvetica', sans-serif;
-        }
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="../css/scrollbar.css">
+   <title>Sexhouse - Lyra Robinson</title>
+   <style>
+       body {
+           font-family: 'Helvetica', sans-serif;
+           margin: 0;
+           padding: 20px;
+           background-color: white;
+           line-height: 1.4;
+       }
+       
+       .content {
+           max-width: 800px;
+           margin: 0 auto;
+           text-align: center;
+       }
 
-        iframe {
-            width: 80%;
-            height: 80%;
-            border: none;
-        }
-    </style>
+       p {
+           font-size: 16px;
+           margin-bottom: 30px;
+       }
+
+       img {
+           width: 100%;
+           max-width: 600px;
+           height: auto;
+           margin: 20px 0;
+       }
+       
+       @media screen and (max-width: 768px) {
+           body {
+               padding: 15px;
+           }
+           
+           p {
+               font-size: 14px;
+           }
+       }
+   </style>
 </head>
 <body>
-	<p>Performed at Safehouse 1 in Peckham on 23/6/2023, the Sexhouse Performance involved me wearing </p>
-    <iframe 
-		<img src="./assets/sexhouse1.gif" alt="Description of the GIF">
-        title="YouTube video player" 
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-        allowfullscreen>
-    </iframe>
-
-	<!--<img src="./assets/IMG_3769.jpg" alt="Description of the GIF"> -->
+   <div class="content">
+       <p>Performed at Safehouse 1 in Peckham on 23/6/2023, the Sexhouse Performance involved me wearing</p>
+       
+       <img src="./assets/sexhouse1.gif" alt="Sexhouse performance documentation">
+       
+       <!-- <img src="./assets/IMG_3769.jpg" alt="Additional performance documentation"> -->
+   </div>
 </body>
 </html>

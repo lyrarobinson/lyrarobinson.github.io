@@ -1,12 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Page Title</title>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="../css/scrollbar.css">
+   <title>AllSky - Lyra Robinson</title>
+   <style>
+       body {
+           font-family: 'Helvetica', sans-serif;
+           margin: 0;
+           padding: 20px;
+           background-color: white;
+           line-height: 1.4;
+           overflow-x: hidden;
+       }
+       
+       .image-container {
+           width: calc(100% - 40px);
+           max-width: 800px;
+           margin: 0 auto 40px auto;
+       }
+       
+       .image-display {
+           width: 100%;
+           height: auto;
+           display: block;
+           margin-bottom: 40px;
+       }
+       
+       .content {
+           max-width: 800px;
+           margin: 0 auto;
+       }
+       
+       h1 {
+           font-size: 32px;
+           font-weight: bold;
+           margin: 0 0 10px 0;
+           line-height: 1.2;
+       }
+       
+       .subtitle {
+           font-size: 18px;
+           margin: 0 0 30px 0;
+           font-weight: normal;
+           color: #666;
+       }
+       
+       p {
+           font-size: 16px;
+           margin: 0 0 20px 0;
+           text-align: left;
+       }
+       
+       /* Mobile styles */
+       @media screen and (max-width: 768px) {
+           body {
+               padding: 15px;
+           }
+           
+           .image-container {
+               width: calc(100% - 30px);
+               max-width: 400px;
+               margin-bottom: 30px;
+           }
+           
+           .image-display {
+               margin-bottom: 30px;
+           }
+           
+           h1 {
+               font-size: 24px;
+           }
+           
+           .subtitle {
+               font-size: 16px;
+           }
+           
+           p {
+               font-size: 14px;
+           }
+       }
+   </style>
 </head>
 <body>
-    <h1>Hello, world!</h1>
-    <p>This is a new HTML file.</p>
+   <div class="image-container">
+       <img src="assets/allsky.jpg" alt="AllSky installation" class="image-display">
+   </div>
+   
+   <div class="content">
+       
+       <p class="subtitle">Generative moving image installation</p>
+       
+       <p>Shown here installed as part of the Camberwell Degree Show.</p>
+       
+       <p>A Latent Diffusion Model I purpose-built from scratch continuously live generates smooth day/night cycles, on a 20-minute loop, projected on a 6x3m fabric sheet suspended from the ceiling.</p>
+       
+       <p>Inspired by my research into operational images, I wanted to investigate how so much of our visual and media cultures are built upon technologies that fix velocities of light onto a 2d plane, used as tools of measurement and classification.</p>
+       
+       <p>As visitors are constantly aware of the passage of time created by the piece, it demonstrates how new technologies can operate as alternative and speculative worldbuilding tools.</p>
+
+	   <p><a href="https://www.youtube.com/watch?v=M7sueJ1M_0c&t=424s&ab_channel=LyraRobinson" target="_blank">timelapse of the piece installed</a></p>
+
+	   <p><a href="https://www.youtube.com/watch?v=-IqVduElTg4&t=20s&ab_channel=LyraRobinsonn" target="_blank">screen recording of a full day</a></p>
+   </div>
+   
+   <div class="image-container">
+       <img src="assets/allsky.gif" alt="AllSky generative process" class="image-display">
+   </div>
 </body>
 </html>

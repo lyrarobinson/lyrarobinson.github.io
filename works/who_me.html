@@ -1,25 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Money Shot</title>
-	<style>
-		body { font-family: 'Helvetica', sans-serif; overflow-x: hidden; padding: 10px 10px 10px 10px;}
-		.landscape {
-			width: 100%;
-			height: auto;
-		}
-		
-	</style>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="../css/scrollbar.css">
+   <title>Who! Me? - Lyra Robinson</title>
+   <style>
+       body {
+           font-family: 'Helvetica', sans-serif;
+           margin: 0;
+           padding: 20px;
+           background-color: white;
+           line-height: 1.4;
+           overflow-x: hidden;
+       }
+       
+       .content {
+           max-width: 1000px;
+           margin: 0 auto;
+       }
+
+       p {
+           font-size: 16px;
+           margin-bottom: 30px;
+           text-align: left;
+       }
+
+       .landscape {
+           width: 100%;
+           height: auto;
+           display: block;
+       }
+       
+       @media screen and (max-width: 768px) {
+           body {
+               padding: 15px;
+           }
+           
+           p {
+               font-size: 14px;
+               margin-bottom: 20px;
+           }
+       }
+   </style>
 </head>
 <body>
-	<p>139 Faces that could be mistaken for me by a machine, sourced from notable facial recognition datasets.
-		<br>Ordered by most to least similar, by python's facial_recognition library.
-		<br>Datasets include MegaFace, VGG-Face, Flicker-Face among others. 
-		<br>All images published under creative commons
-	</p>
-	<img src="./assets/lyratopleft.jpg" alt="Landscape" class="landscape">
-
+   <div class="content">
+       <p>139 Faces that could be mistaken for me by a machine, sourced from notable facial recognition datasets.
+           <br>Ordered by most to least similar, by python's facial_recognition library.
+           <br>Datasets include MegaFace, VGG-Face, Flicker-Face among others. 
+           <br>All images published under creative commons
+       </p>
+       <img src="./assets/lyratopleft.jpg" alt="Grid of 139 faces from facial recognition datasets" class="landscape">
+   </div>
 </body>
 </html>

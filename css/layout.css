@@ -1,0 +1,49 @@
+/* Layout styles for Lyra Robinson's portfolio */
+
+body { 
+    font-family: 'Helvetica', sans-serif; 
+    overflow-x: hidden;
+}
+
+#container { 
+    display: flex; 
+    height: 100vh;
+}
+
+#leftColumn { 
+    flex: 1; 
+    padding: 0px 10px 10px 10px; 
+    overflow-y: auto; 
+    height: 100vh; 
+    text-align: left; 
+    line-height: 0.8;
+}
+
+#rightColumn { 
+    flex: 2; 
+    padding: 10px; 
+    max-height: 100vh; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    overflow: hidden; 
+    text-align: center;
+    flex-direction: column; /* This allows stacking of elements vertically */
+}
+
+#artistInfo { 
+    margin-bottom: 20px; 
+}
+
+#works { 
+    overflow-y: auto; 
+}
+
+#featuredWork {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+}
