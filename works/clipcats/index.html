@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../css/scrollbar.css">
   <link href="https://fonts.googleapis.com/css2?family=Liberation+Mono&display=swap" rel="stylesheet">
-  <title>Sexhouse</title>
+  <title>CLIPcats</title>
   <style>
       body {
 		  font-family: 'Liberation Mono', monospace;
@@ -85,18 +85,19 @@
   </style>
 </head>
 <body>
+  <div class="image-container">
+      <img src="../assets/clipcats.png" alt="CLIPcats installation" class="image-display">
+  </div>
+  
   <div class="content">
-      <p>Performed at Safehouse 1. I wear an apparatus (left) consisting of touch sensors enveloped in a tube on the front, which activate vibrators attached to my temple, nipples, and anus.</p>
       
-      <p>Visitors are invited to sexually stimulate me (right).</p>
-  </div>
-  
-  <div class="image-container">
-      <img src="assets/sexhouse1.png" alt="Sexhouse performance" class="image-display">
-  </div>
-  
-  <div class="image-container">
-      <img src="assets/sexhouse1.gif" alt="Sexhouse performance documentation" class="image-display">
+      <p class="subtitle">Digital collage</p>
+      
+      <p>I used reinforcement learning to create a proximal policy optimization model capable of fooling openAI's CLIP-ViT-B-32 classifier.</p>
+      
+      <p>The PPO takes an input image of dog, and has the option to shuffle pixels, add noise, or slightly distort the RGB channels. It applies these transformations until the classifier registers the image as a cat.</p>
+      
+      <p>Over time, the PPO 'learns' how to do this in fewer and fewer steps. In theory, the model will eventually be able to apply a transformation that will fool that classifier but be almost imperceptible to a human.</p>
   </div>
 </body>
 </html>

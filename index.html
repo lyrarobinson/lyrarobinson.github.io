@@ -3,11 +3,53 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- SEO Meta Tags -->
+<title>Lyra Robinson - New Media Artist Portfolio</title>
+<meta name="description" content="Portfolio of new media artist Lyra Robinson featuring digital art, video installations, AI projects, and experimental works from 2022-2025.">
+<meta name="keywords" content="new media art, digital artist, video installation, AI art, experimental art, contemporary artist">
+<meta name="author" content="Lyra Robinson">
+
+<!-- Open Graph for Social Media -->
+<meta property="og:title" content="Lyra Robinson - New Media Artist">
+<meta property="og:description" content="Portfolio featuring digital art, video installations, and experimental new media works">
+<meta property="og:url" content="https://lyrarobinson.art">
+<meta property="og:type" content="website">
+
+<!-- Structured Data for Artist -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Lyra Robinson",
+  "jobTitle": "New Media Artist",
+  "description": "Contemporary new media artist specializing in digital art, video installations, and experimental works",
+  "url": "https://lyrarobinson.art",
+  "email": "lyrarobinson02@gmail.com",
+  "sameAs": [
+    "https://github.com/lyrarobinson",
+    "https://www.youtube.com/@lyrarobinson5221",
+    "https://substack.com/@lyra797589"
+  ],
+  "worksFor": {
+    "@type": "Organization",
+    "name": "Independent Artist"
+  },
+  "knowsAbout": ["Digital Art", "Video Installation", "AI Art", "Experimental Media"]
+}
+</script>
+
+<!-- Canonical URL -->
+<link rel="canonical" href="https://lyrarobinson.art">
+
 <link rel="stylesheet" href="css/scrollbar.css">
 <link rel="stylesheet" href="css/mobile.css">
 <link rel="stylesheet" href="css/layout.css">
 <link href="https://fonts.googleapis.com/css2?family=Liberation+Mono&display=swap" rel="stylesheet">
-<title>Lyra Robinson - Artist Portfolio</title>
+
+<link rel="icon" type="image/png" href="icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="icon.png">
+
 <style>
  .workImage { 
    max-width: 100%; 
@@ -34,9 +76,6 @@
 <script src="https://cdn.jsdelivr.net/npm/three@0.125.2/build/three.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/three@0.125.2/examples/js/loaders/GLTFLoader.js"></script>
 
-<link rel="icon" type="image/png" href="icon.png">
-<link rel="apple-touch-icon" sizes="180x180" href="icon.png">
-
 </head>
 <body>
 
@@ -45,7 +84,7 @@
    <div id="artistInfo">
      <h2>Lyra Robinson</h2>
      <p>new media artist</p>
-     <p><a href="#" onclick="loadContent('artist_statement.html')">about</a></p>
+     <p><a href="about" onclick="return handleWorkLink('about/', event)">about</a></p>
      <p>@lyrafuckingrobinson</p>
      <p>lyrarobinson02@gmail.com</p>
      <p><a href="https://github.com/lyrarobinson" target="_blank">github</a> //
@@ -57,22 +96,23 @@
    <div id="Works">
      <!-- <h2>Selected Work</h2> -->
      <h3>2025</h3>
-     <p><a href="#" onclick="loadContent('works/allsky.html')">AllSky</a></p>
-     <p><a href="#" onclick="loadContent('works/mumlook.html')">Mum look I'm on TV!</a></p>
-     <p><a href="#" onclick="loadContent('works/constitution.html')">Writing an AI constitution</a></p>
-     <p><a href="#" onclick="loadContent('works/alt_ops.html')">alternative operations</a></p>
-     <p><a href="#" onclick="loadContent('works/who_me.html')">who! me?</a></p>
-     <p><a href="#" onclick="loadContent('works/rat.html')">Unwillingly, O queen, did I thy hair// Part from thy head</a></p>
+     <p><a href="works/fishin" onclick="return handleWorkLink('works/fishin/', event)">Gone Fishing</a></p>
+     <p><a href="works/allsky" onclick="return handleWorkLink('works/allsky/', event)">AllSky</a></p>
+     <p><a href="works/mumlook" onclick="return handleWorkLink('works/mumlook/', event)">Mum look I'm on TV!</a></p>
+     <p><a href="works/constitution" onclick="return handleWorkLink('works/constitution/', event)">Writing an AI constitution</a></p>
+     <p><a href="works/alt_ops" onclick="return handleWorkLink('works/alt_ops/', event)">alternative operations</a></p>
+     <p><a href="works/who_me" onclick="return handleWorkLink('works/who_me/', event)">who! me?</a></p>
+     <p><a href="works/rat" onclick="return handleWorkLink('works/rat/', event)">Unwillingly, O queen, did I thy hair// Part from thy head</a></p>
      <h3>2024</h3>
-     <p><a href="#" onclick="loadContent('works/clipcats.html')">clipcats</a></p>
-     <p><a href="#" onclick="loadContent('works/ascii.html')">ASCII</a></p>
-     <p><a href="#" onclick="loadContent('works/eyesinmotion.html')">eyes in motion</a></p>
-     <p><a href="#" onclick="loadContent('works/oculus.html')">oculus</a></p>
+     <p><a href="works/clipcats" onclick="return handleWorkLink('works/clipcats/', event)">clipcats</a></p>
+     <p><a href="works/ascii" onclick="return handleWorkLink('works/ascii/', event)">ASCII</a></p>
+     <p><a href="works/eyesinmotion" onclick="return handleWorkLink('works/eyesinmotion/', event)">eyes in motion</a></p>
+     <p><a href="works/oculus" onclick="return handleWorkLink('works/oculus/', event)">oculus</a></p>
      <h3>2023</h3>
-     <p><a href="#" onclick="loadContent('works/sexhouse.html')">sexhouse</a></p>
-     <p><a href="#" onclick="loadContent('works/facesvid.html')">facesvid1.mp4</a></p>
+     <p><a href="works/sexhouse" onclick="return handleWorkLink('works/sexhouse/', event)">sexhouse</a></p>
+     <p><a href="works/facesvid" onclick="return handleWorkLink('works/facesvid/', event)">facesvid1.mp4</a></p>
      <h3>2022</h3>
-     <p><a href="#" onclick="loadContent('works/onetimeiwasonaboat.html')">one time i was on a boat and I took a shitload of ket and it made me feel really weird</a></p>
+     <p><a href="works/onetimeiwasonaboat" onclick="return handleWorkLink('works/onetimeiwasonaboat/', event)">one time i was on a boat and I took a shitload of ket and it made me feel really weird</a></p>
      <!-- More works can be added here -->
    </div>
    <div id="modelContainer" style="width: 100%; height: 400px;"></div>
@@ -82,9 +122,37 @@
  <div id="rightColumn">
    <div id="featuredWork">
      <figure class="changeImage">
-   	<img src="image1.jpg" alt="Name of Work" class="workImage">
-   	<figcaption>"faces" exhibited at DebouwPut Gallery in Amsterdam</figcaption>
+   	<img src="image1.jpg" 
+         alt="Faces video installation by Lyra Robinson exhibited at DebouwPut Gallery Amsterdam" 
+         class="workImage"
+         width="800" 
+         height="600"
+         loading="lazy">
+   	<figcaption><strong>"faces"</strong> exhibited at DebouwPut Gallery in Amsterdam, 2023</figcaption>
      </figure>
+     
+     <!-- Structured data for the featured artwork -->
+     <script type="application/ld+json">
+     {
+       "@context": "https://schema.org",
+       "@type": "VisualArtwork",
+       "name": "faces",
+       "creator": {
+         "@type": "Person",
+         "name": "Lyra Robinson"
+       },
+       "dateCreated": "2023",
+       "artform": "Digital Art",
+       "artMedium": "Video Installation",
+       "locationCreated": {
+         "@type": "Place",
+         "name": "DebouwPut Gallery",
+         "address": "Amsterdam, Netherlands"
+       },
+       "image": "https://lyrarobinson.art/image1.jpg",
+       "description": "Video installation featuring digital manipulation of facial imagery"
+     }
+     </script>
    </div>
    <iframe id="contentFrame" style="width: 100%; height: 100%; border: none;"></iframe>
  </div>  
@@ -99,6 +167,21 @@
 </div>
 
 <script>
+   // Updated navigation handler that preserves your design while being SEO-friendly
+   function handleWorkLink(fileName, event) {
+     // Check if user is trying to open in new tab (Ctrl+click, middle click, etc.)
+     if (event.ctrlKey || event.metaKey || event.button === 1) {
+       // Let the browser handle it normally (open in new tab)
+       return true;
+     }
+     
+     // Otherwise, use your existing loadContent functionality
+     loadContent(fileName);
+     
+     // Prevent default link behavior (don't navigate away)
+     return false;
+   }
+
    function loadContent(fileName) {
    	// Check if we're on mobile (screen width <= 768px)
    	if (window.innerWidth <= 768) {
@@ -142,20 +225,21 @@
 <script>
    // Array of all your artwork pages
    const artworks = [
-     'works/allsky.html',
-     'works/mumlook.html',
-     'works/constitution.html',
-     'works/alt_ops.html',
-     'works/who_me.html',
-     'works/rat.html',
-     'works/clipcats.html',
-     'works/ascii.html',
-     'works/eyesinmotion.html',
-     'works/oculus.html',
-     'works/sexhouse.html',
-     'works/facesvid.html',
-     'works/onetimeiwasonaboat.html',
-     'artist_statement.html'
+     'works/allsky/',
+     'works/mumlook/',
+     'works/constitution/',
+     'works/alt_ops/',
+     'works/who_me/',
+     'works/rat/',
+     'works/clipcats/',
+     'works/ascii/',
+     'works/eyesinmotion/',
+     'works/oculus/',
+     'works/sexhouse/',
+     'works/facesvid/',
+     'works/onetimeiwasonaboat/',
+     'works/fishin/',
+     'about/'
    ];
    
    // Function to load a random artwork on page load
