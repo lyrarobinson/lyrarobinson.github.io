@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
+  <!-- Gone Fishing Images -->
+  <url>
+    <loc>https://lyrarobinson.art/works/fishin/</loc>
+    <image:image>
+      <image:loc>https://lyrarobinson.art/works/assets/lyra-robinson-gone-fishin-installation.JPG</image:loc>
+      <image:title>Gone Fishing Installation</image:title>
+      <image:caption>Gone Fishing artwork installation by Lyra Robinson</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://lyrarobinson.art/works/assets/lyra-robinson-gone-fishin-moving-image-artwork.JPG</image:loc>
+      <image:title>Gone Fishing Close-up Detail</image:title>
+      <image:caption>Gone Fishing close up detail view of moving image artwork</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://lyrarobinson.art/works/assets/lyra-robinson-gone-fishin-copeland-gallery.JPG</image:loc>
+      <image:title>Gone Fishing at Copeland Gallery</image:title>
+      <image:caption>Gone Fishing installation view at the Copeland Gallery</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://lyrarobinson.art/works/assets/lyra-robinson-gone-fishin-griefbot-AI-artwork.JPG</image:loc>
+      <image:title>Gone Fishing AI Griefbot Component</image:title>
+      <image:caption>Gone Fishing AI griefbot artwork component detail</image:caption>
+    </image:image>
+  </url>
+
+  <!-- AllSky Images -->
+  <url>
+    <loc>https://lyrarobinson.art/works/allsky/</loc>
+    <image:image>
+      <image:loc>https://lyrarobinson.art/works/assets/AllSky-Lyra-Robinson-generative-moving-image-installation.jpg</image:loc>
+      <image:title>AllSky Installation at Camberwell Degree Show</image:title>
+      <image:caption>AllSky installation at the Camberwell College of Arts Degree show featuring generative moving image projection</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://lyrarobinson.art/works/assets/AllSky-installation-view-Camberwell-Degree_show.gif</image:loc>
+      <image:title>AllSky Animated Documentation</image:title>
+      <image:caption>AllSky by Lyra Robinson animated documentation showing day/night cycle progression</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://lyrarobinson.art/works/assets/AllSky-installation-view-Camberwell-Degree_show.JPG</image:loc>
+      <image:title>AllSky Installation Documentation</image:title>
+      <image:caption>AllSky AI latent diffusion model artwork installation view at Camberwell</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://lyrarobinson.art/works/assets/AllSky-artwork-installation-AI.png</image:loc>
+      <image:title>AllSky Generative Process Documentation</image:title>
+      <image:caption>AllSky generative process showing AI artwork creation methodology</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://lyrarobinson.art/works/assets/AllSky-Lyra-Robinson-latent-diffusion-model-artwork.JPG</image:loc>
+      <image:title>AllSky Full Day Cycle Documentation</image:title>
+      <image:caption>AllSky full day documentation showing latent diffusion model artwork by Lyra Robinson</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Mum look I'm on TV! Images -->
+  <url>
+    <loc>https://lyrarobinson.art/works/mumlook/</loc>
+    <image:image>
+      <image:loc>https://lyrarobinson.art/works/assets/Lyra-Robinson-Mum-look-i'm-on-tv-artwork.jpg</image:loc>
+      <image:title>Mum look I'm on TV! at Tate Modern</image:title>
+      <image:caption>Mum look I'm on TV! by Lyra Robinson installation at the Tate Modern featuring custom deepfake model</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://lyrarobinson.art/works/assets/look-mum-i'm-on-tv-deepfake-AI-artwork.gif</image:loc>
+      <image:title>Deepfake Process Demonstration</image:title>
+      <image:caption>Deepfake process demonstration showing real-time face replacement technology in Mum look I'm on TV!</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Writing an AI constitution Images -->
+  <url>
+    <loc>https://lyrarobinson.art/works/constitution/</loc>
+    <image:image>
+      <image:loc>https://lyrarobinson.art/works/assets/const/lyra-robinson-writing-an-AI-constitution-tate-modern1.png</image:loc>
+      <image:title>Writing an AI Constitution Workshop at Tate Modern - Image 1</image:title>
+      <image:caption>Constitutional Workshop exploring AI governance and ethics at Tate Modern by Lyra Robinson</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://lyrarobinson.art/works/assets/const/lyra-robinson-writing-an-AI-constitution-tate-modern2.png</image:loc>
+      <image:title>Writing an AI Constitution Workshop at Tate Modern - Image 2</image:title>
+      <image:caption>Constitutional Workshop documentation showing collaborative AI ethics discussion</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://lyrarobinson.art/works/assets/const/lyra-robinson-writing-an-AI-constitution-tate-modern3.png</image:loc>
+      <image:title>Writing an AI Constitution Workshop at Tate Modern - Image 3</image:title>
+      <image:caption>Constitutional Workshop documentation exploring AI governance principles</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://lyrarobinson.art/works/assets/const/lyra-robinson-writing-an-AI-constitution-tate-modern4.png</image:loc>
+      <image:title>Writing an AI Constitution Workshop at Tate Modern - Image 4</image:title>
+      <image:caption>Constitutional Workshop process documentation at Tate Modern</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://lyrarobinson.art/works/assets/const/lyra-robinson-writing-an-AI-constitution-tate-modern5.png</image:loc>
+      <image:title>Writing an AI Constitution Workshop at Tate Modern - Image 5</image:title>
+      <image:caption>Constitutional Workshop collaborative discussion documentation</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://lyrarobinson.art/works/assets/const/lyra-robinson-writing-an-AI-constitution-tate-modern6.png</image:loc>
+      <image:title>Writing an AI Constitution Workshop at Tate Modern - Image 6</image:title>
+      <image:caption>Constitutional Workshop participants engaging with AI governance questions</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://lyrarobinson.art/works/assets/const/lyra-robinson-writing-an-AI-constitution-tate-modern7.png</image:loc>
+      <image:title>Writing an AI Constitution Workshop at Tate Modern - Image 7</image:title>
+      <image:caption>Constitutional Workshop exploring democratic AI principles</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://lyrarobinson.art/works/assets/const/lyra-robinson-writing-an-AI-constitution-tate-modern8.png</image:loc>
+      <image:title>Writing an AI Constitution Workshop at Tate Modern - Image 8</image:title>
+      <image:caption>Constitutional Workshop final documentation showing collaborative AI constitution drafting</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://lyrarobinson.art/works/assets/const/lyra-robinson-writing-an-AI-constitution-tate-modern9.png</image:loc>
+      <image:title>Writing an AI Constitution Workshop at Tate Modern - Image 9</image:title>
+      <image:caption>Constitutional Workshop conclusion documentation at Tate Modern residency</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Alternative Operations Images -->
+  <url>
+    <loc>https://lyrarobinson.art/works/alt_ops/</loc>
+    <image:image>
+      <image:loc>https://lyrarobinson.art/works/assets/lyra-robinson-alternative-operations-moving-image-installation-artwork.jpeg</image:loc>
+      <image:title>Alternative Operations Installation at Millbank Tower</image:title>
+      <image:caption>Alternative Operations installation by Lyra Robinson at Millbank Tower showing moving image installation exploring body classification</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://lyrarobinson.art/works/assets/alternative-operations-moving-image-installation-artwork.gif</image:loc>
+      <image:title>Alternative Operations Process Demonstration</image:title>
+      <image:caption>Alternative Operations demonstration showing real-time movement classification and video playback system</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Who! Me? Images -->
+  <url>
+    <loc>https://lyrarobinson.art/works/who_me/</loc>
+    <image:image>
+      <image:loc>https://lyrarobinson.art/works/assets/lyra-robinson-who-me-artwork-photographer's-gallery.jpg</image:loc>
+      <image:title>Who! Me? Installation at Photographer's Gallery</image:title>
+      <image:caption>Who Me? by Lyra Robinson installation at the Photographer's Gallery, commissioned by the Flickr Foundation</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://lyrarobinson.art/works/assets/lyra-robinson-who-me-artwork-digital-collage.jpg</image:loc>
+      <image:title>Who! Me? Digital Collage Detail</image:title>
+      <image:caption>Who Me? digital collage detail showing 139 faces from facial recognition datasets that could be mistaken for the artist</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://lyrarobinson.art/works/assets/who-me-facial-recognition-artwork.gif</image:loc>
+      <image:title>Who! Me? Facial Recognition Process Animation</image:title>
+      <image:caption>Who Me? animation demonstrating facial recognition process and similarity algorithms across multiple datasets</image:caption>
+    </image:image>
+  </url>
+
+  <!-- CLIPcats Images -->
+  <url>
+    <loc>https://lyrarobinson.art/works/clipcats/</loc>
+    <image:image>
+      <image:loc>https://lyrarobinson.art/works/assets/lyra-robinson-CLIP-cats-artwork.png</image:loc>
+      <image:title>CLIPcats Digital Collage</image:title>
+      <image:caption>CLIPcats digital collage by Lyra Robinson using reinforcement learning to fool CLIP-ViT-B-32 classifier</image:caption>
+    </image:image>
+  </url>
+
+</urlset>
