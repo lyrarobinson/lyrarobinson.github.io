@@ -5,41 +5,62 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <link rel="stylesheet" href="../css/scrollbar.css">
    <link href="https://fonts.googleapis.com/css2?family=Liberation+Mono&display=swap" rel="stylesheet">
-   <title>Video Title - Lyra Robinson</title>
+   <title>ASCII - Lyra Robinson</title>
    <style>
        body {
 		   font-family: 'Liberation Mono', monospace;
            margin: 0;
-           height: 100vh;
-           display: flex;
-           flex-direction: column;
-           justify-content: center;
-           align-items: center;
+           padding: 20px;
            background-color: white;
        }
 
+       h1 {
+           font-size: 32px;
+           font-weight: bold;
+           margin: 0 0 20px 0;
+           text-align: left;
+       }
+
+       .video-container {
+           position: relative;
+           width: 100%;
+           height: 0;
+           padding-bottom: 56.25%; /* 16:9 aspect ratio */
+           margin-bottom: 20px;
+       }
+
        iframe {
-           width: 80%;
-           height: 80%;
+           position: absolute;
+           top: 0;
+           left: 0;
+           width: 100%;
+           height: 100%;
            border: none;
        }
        
        @media screen and (max-width: 768px) {
-           iframe {
-               width: 95%;
-               height: 70%;
+           h1 {
+               font-size: 24px;
            }
        }
    </style>
 </head>
 <body>
+   <a href="../../" class="nav-link" target="_parent">← home</a>
+   <h1>ascii</h1>
+   
+   <div class="video-container">
+       <iframe 
+           src="https://www.youtube.com/embed/aq2dRFyyWkw?start=86&rel=0&modestbranding=1" 
+           title="ASCII video" 
+           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+           allowfullscreen>
+       </iframe>
+   </div>
 
-   <iframe 
-       src="https://www.youtube.com/embed/aq2dRFyyWkw?start=86" 
-       title="YouTube video player" 
-       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-       allowfullscreen>
-   </iframe>
-
+   <div style="display: flex; justify-content: space-between; margin-top: 40px; padding-top: 20px; border-top: 1px solid #ccc;">
+    <a href="../clipcats/" target="_parent">← prev: clipcats</a>
+    <a href="../eyesinmotion/" target="_parent">next: eyes in motion →</a>
+</div>
 </body>
 </html>

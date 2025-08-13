@@ -5,54 +5,74 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <link rel="stylesheet" href="../css/scrollbar.css">
    <link href="https://fonts.googleapis.com/css2?family=Liberation+Mono&display=swap" rel="stylesheet">
-   <title>oculus</title>
+   <title>oculus - Lyra Robinson</title>
    <style>
        body {
 		   font-family: 'Liberation Mono', monospace;
            margin: 0;
-           height: 100vh;
-           display: flex;
-           flex-direction: column;
-           justify-content: center;
-           align-items: center;
-           background-color: white;
            padding: 20px;
-           box-sizing: border-box;
+           background-color: white;
+       }
+
+       h1 {
+           font-size: 32px;
+           font-weight: bold;
+           margin: 0 0 20px 0;
+           text-align: left;
        }
 
        p {
            font-size: 16px;
-           text-align: center;
-           margin-bottom: 20px;
+           margin-bottom: 30px;
            max-width: 600px;
+           text-align: left;
+       }
+
+       .video-container {
+           position: relative;
+           width: 100%;
+           height: 0;
+           padding-bottom: 56.25%; /* 16:9 aspect ratio */
+           margin-bottom: 20px;
        }
 
        iframe {
-           width: 80%;
-           height: 70%;
+           position: absolute;
+           top: 0;
+           left: 0;
+           width: 100%;
+           height: 100%;
            border: none;
        }
        
        @media screen and (max-width: 768px) {
-           p {
-               font-size: 14px;
-               margin-bottom: 15px;
+           h1 {
+               font-size: 24px;
            }
            
-           iframe {
-               width: 95%;
-               height: 60%;
+           p {
+               font-size: 14px;
            }
        }
    </style>
 </head>
 <body>
+   <a href="../../" class="nav-link" target="_parent">← home</a>
+   <h1>oculus</h1>
    <p>A flicker film composed of images taken from leaked training datasets for a russian cybersecurity AI.</p>
-   <iframe 
-       src="https://drive.google.com/file/d/1ou9jnrua78joMMk15SGfVozGx4P4fx_M/preview" 
-       title="Flicker film from leaked datasets"
-       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-       allowfullscreen>
-   </iframe>
+   
+   <div class="video-container">
+       <iframe 
+           src="https://drive.google.com/file/d/1ou9jnrua78joMMk15SGfVozGx4P4fx_M/preview" 
+           title="Flicker film from leaked datasets"
+           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+           allowfullscreen>
+       </iframe>
+   </div>
+
+   <div style="display: flex; justify-content: space-between; margin-top: 40px; padding-top: 20px; border-top: 1px solid #ccc;">
+    <a href="../eyesinmotion/" target="_parent">← prev: eyes in motion</a>
+    <a href="../sexhouse/" target="_parent">next: sexhouse →</a>
+</div>
 </body>
 </html>
