@@ -56,6 +56,10 @@
         display: block;
         margin-bottom: 20px;
     }
+
+    iframe.image-display {
+        aspect-ratio: 16/9;
+    }
     
     /* Mobile styles */
     @media screen and (max-width: 768px) {
@@ -235,7 +239,16 @@
 
    <p>The piece reverse-engineers the impact statement video. Using the same script, it contrasts more lifelike versions and more noticeably artificial versions of Chris Pelkey with the original video.</p>
 
-   <p>a single-channel version of the work is available to watch <a href="https://youtu.be/pj7NrZFzWwI" target="_blank">here</a> </p>
+   <div class="image-container">
+       <iframe 
+           class="image-display" 
+           src="https://www.youtube.com/embed/pj7NrZFzWwI?autoplay=1&mute=1&loop=1&playlist=pj7NrZFzWwI&rel=0&showinfo=0&controls=1"
+           frameborder="0" 
+           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+           allowfullscreen>
+       </iframe>
+   </div>
+
    <div class="image-container">
        <img src="../assets/lyra-robinson-gone-fishin-moving-image-artwork.JPG" alt="Gone Fishing close up" class="image-display">
    </div>
