@@ -44,6 +44,38 @@
         text-align: center;
     }
     
+    /* Add styles for links */
+    a {
+        color: #0066cc;
+        text-decoration: underline;
+        font-family: 'Liberation Mono', monospace;
+        font-size: 16px;
+        line-height: 1.4;
+    }
+    
+    a:hover {
+        color: #004499;
+    }
+    
+    .nav-link {
+        display: block;
+        margin-bottom: 20px;
+    }
+    
+    /* Style for the sources section */
+    .sources {
+        margin-top: 30px;
+    }
+    
+    .sources p {
+        margin-bottom: 10px;
+    }
+    
+    .sources a {
+        display: inline-block;
+        margin-bottom: 8px;
+    }
+    
     .image-container {
         width: 100%;
         max-width: 800px;
@@ -74,15 +106,42 @@
         p.subtitle {
             font-size: 16px;
         }
+        
+        a {
+            font-size: 14px;
+        }
     }
 </style>
 </head>
 <body>
    <div class="content">
-      <a href="../../" class="nav-link" target="_parent">← home</a>
+      <a href="../../" class="nav-link" target="_parent">← home (my site)</a>
+   
+      <p>Alternative Operations uses real-time action classification to display a flood of training data taken from Moments in Time, corresponding to a viewer's action/inaction.</p>
+
+      <p>Moments in Time is a collection of one million annotated 3 second videos, designed to correspond to the average duration of human short-term memory.</p>
+
+      <p>Construction of dataset was supervised by research scientists at MiT. Videos were primarily scraped from youtube, and categorised in several rounds by Amazon Mechanical Turk workers. </p>
+
+      <p>The categories used in the final set are intentionally vague - 'opening' could refer to a door, a gate, or an eye. </p>
+
+      <p>Overworked and underpaid Mechanical Turkers are required to decide whether a certain video fits into a vague category - categories that cross linguistic and cultural barriers. </p>
+
+      <p>This taxonomy often fails, and in extreme cases, as Everest Pipkin pointed out, the categories 'kissing' and 'hitting' document unconsensual acts and excessive violence*. </p>
+
+      <p>As well as a linguistic issue, the dataset also presents a technological one. The classifications in this piece are made by 2d resnet model, released by MiT to other researchers and pre-trained on the Moments in Time set. As you will notice - it is often inaccurate.</p>
+
+      <p>The model will regularly default to categories with a higher internal visual consistency, and always seeks to recognise an action even when no action is performed. </p>
+
+      <p><i>*These categrories have been removed from this installation. </i></p>
+
+      <div class="sources">
+         <p>Sources:</p>
+         <a href="http://moments.csail.mit.edu/TPAMI.2019.2901464.pdf">Moments in Time Dataset: one million videos for event understanding</a>
+         <a href="https://unthinking.photography/articles/on-mits-moments-in-time-and-being-dead-alive">On MIT's Moments in Time (and Being Dead-Alive)</a>
+         <a href="https://www.theatlantic.com/business/archive/2018/01/amazon-mechanical-turk/551192/">The Internet Is Enabling a New Kind of Poorly Paid Hell</a>
+         <a href="https://unthinking.photography/articles/on-lacework">On Lacework: watching an entire machine-learning dataset</a>
+      </div>
    </div>
-   
-   <!-- Your content here -->
-   
 </body>
 </html>
