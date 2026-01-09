@@ -169,34 +169,14 @@
       </div>    
 
       <p>I think the language of Jerk off instruction (joi) videos is unique in that it requires the context of bodily experience to be fully comprehensible. LLMs operate through vector embeddings - distributed representations 
-where the spatial/semantic relationship between 'father' and 'son' parallels that between 'mother' and 'daughter. This mapping of meaning into mathematical space allows machines to mimic and deploy human language with remarkable fluency. But the aesthetics and 
+where the spatial/semantic relationship between (for example) 'father' and 'son' parallels that between 'mother' and 'daughter. This mapping of meaning into mathematical space allows machines to mimic and deploy human language with remarkable fluency. But the aesthetics and 
 social-cultural subtext of JOI - its frequent use of double-entendre, intentional subversion of established norms, and assumption of a desiring body on the other end - can cause these machinic understandings to fragment and destabilise. 
 </p>
 
         <p>Joy is an attempt to investigate a few aspects of what people are starting to call the 'GoonVerse' or 'Goon Economy': networked dissemination of content in which sexual suggestion is leveraged to maximise engagement, setting off a chain reaction of desire and sexuality rerouted and amplified through a matrix of algorithmic interpretation and recommendation.
 </p>
 
-      <h1 id="joy">Joy</h1>
-
-      <p>The main installation with the webcam mirrors a social media recommendation algorithm, in that it uses a two-tower neural network. This is a fancy way of saying that a bunch of content is categorised and tagged to create an <i>n</i>th dimensional vector capable of describing one piece of 
-content's semantic relationship to another piece, this vector then being compared (typically through a process of cosine similarity)  to a different vector that represents some sort of input, like scrolls or shares. In our case, the content is transcripts of 
-different types of jerk off instruction videos. I used an LLM to tag these clips and rate them on a scale of 0.000 to 1, according to 15 different values. The values are designed to encapsulate qualities like intimacy, aggression, and demand, and to correspond to the data we can get from the webcam.
-</p>
-
-        <p>The system learns from audience behavior in real time through an AttentionMLP neural network with 53,260 parameters. When a visitor is in view of the camera, 
-YOLOv8 pose detection tracks their position and orientation, generating a 15-dimensional scene vector that encodes behavioral features like proximity to the screen, body orientation, and movement patterns. 
-This live scene vector is compared against the pre-analyzed 15-dimensional vectors of tens of thousands of video clips in the database.
-</p>
-
-        <p>Rather than simply playing the most semantically similar content, the neural network predicts which clips will generate engagement - measured through changes in visitor attention, dwell time, and spatial proximity. 
-The network takes a 42-dimensional input combining the scene vector, candidate clip vectors, their cosine similarity, historical engagement metrics, and temporal features (time since last clip change, recent viewing history).
-It outputs a predicted engagement score between 0.000 and 1 for each candidate clip.
-</p>
-
-        <p>The system operates as a reinforcement learning loop: after each clip plays, the installation calculates a reward signal based on whether visitor engagement increased or decreased.
-These experiences - the input features, predicted scores, and actual outcomes - are stored in a buffer and used to continuously retrain the network. Over time, the algorithm learns which types of content resonate with which behavioral patterns, 
-adapting not only its clip selections but also its switching frequency and similarity thresholds. The system discovers its own rhythm: when to jump quickly between disparate content versus when to linger in semantically coherent sequences, based 
-on what sustains visitor attention rather than following predetermined rules.</p>   
+      <h1 id="joy">Joy</h1> 
 
       <!--<h2>System Architecture Diagram</h2> -->
       <pre>
@@ -290,6 +270,28 @@ on what sustains visitor attention rather than following predetermined rules.</p
                            └───────────────────┘
       </pre>
 
+
+      <p>The main installation with the webcam mirrors a social media recommendation algorithm, in that it uses a two-tower neural network. This is a fancy way of saying that a bunch of content is categorised and tagged to create an <i>n</i>th dimensional vector capable of describing one piece of 
+content's semantic relationship to another piece, this vector then being compared (typically through a process of cosine similarity)  to a different vector that represents some sort of input, like scrolls or shares. In our case, the content is transcripts of 
+different types of jerk off instruction videos. I used an LLM to tag these clips and rate them on a scale of 0.000 to 1, according to 15 different values. The values are designed to encapsulate qualities like intimacy, aggression, and demand, and to correspond to the data we can get from the webcam.
+</p>
+
+        <p>The system learns from audience behavior in real time through an AttentionMLP neural network with 53,260 parameters. When a visitor is in view of the camera, 
+YOLOv8 pose detection tracks their position and orientation, generating a 15-dimensional scene vector that encodes behavioral features like proximity to the screen, body orientation, and movement patterns. 
+This live scene vector is compared against the pre-analyzed 15-dimensional vectors of tens of thousands of video clips in the database.
+</p>
+
+        <p>Rather than simply playing the most semantically similar content, the neural network predicts which clips will generate engagement - measured through changes in visitor attention, dwell time, and spatial proximity. 
+The network takes a 42-dimensional input combining the scene vector, candidate clip vectors, their cosine similarity, historical engagement metrics, and temporal features (time since last clip change, recent viewing history).
+It outputs a predicted engagement score between 0.000 and 1 for each candidate clip.
+</p>
+
+        <p>The system operates as a reinforcement learning loop: after each clip plays, the installation calculates a reward signal based on whether visitor engagement increased or decreased.
+These experiences - the input features, predicted scores, and actual outcomes - are stored in a buffer and used to continuously retrain the network. Over time, the algorithm learns which types of content resonate with which behavioral patterns, 
+adapting not only its clip selections but also its switching frequency and similarity thresholds. The system discovers its own rhythm: when to jump quickly between disparate content versus when to linger in semantically coherent sequences, based 
+on what sustains visitor attention rather than following predetermined rules.</p>   
+
+
       <h1 id="eye-contact">Eye Contact</h1>
       <p>There's also a video composed of different 'eye contact challenge' tiktoks. Social Media platforms are under regulatory pressure to censor explicit content and protect minors, and so creators have to try to find ways around this - creating a video that won't get tagged by the machine looking at it, 
 but could still produce some kind of response in a warm-blooded human. These different ways of circumventing machinic intervention spawn their own trends, creating a weird feedback loop of virality. 
@@ -314,12 +316,7 @@ intimacy. To these systems desire is simply high-correlation features to be mine
 recombined.</p>
 
       <h1 id="comfort-me">Comfort Me</h1>
-      <p>[Content for Come for me section goes here]</p>
 
-      <div class="sources">
-         <p>Sources:</p>
-         <a href="http://moments.csail.mit.edu/TPAMI.2019.2901464.pdf">Moments in Time Dataset: one million videos for event understanding</a>
-      </div>
    </div>
 
    <div class="image-container">
